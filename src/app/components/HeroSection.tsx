@@ -100,15 +100,24 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full z-30">
+    <section className="relative h-screen w-full z-30 overflow-hidden">
+      {/* Background Video */}
+      <video
+        src="/export-building.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
+      />
       {/* Background Image */}
-      <Image
+      {/* <Image
         src="/hero.jpeg"
         alt="Signature Project"
         fill
         priority
         className="object-cover"
-      />
+      /> */}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-between h-full text-white px-6 py-10">
